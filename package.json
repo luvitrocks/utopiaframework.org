@@ -2,17 +2,19 @@
   "name": "utopiaframework.org",
   "version": "1.0.0",
   "description": "Landing website for Utopia Framework",
-  "main": "pages/index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p NODE_PORT",
+    "start": "next start -p 80",
     "test": "echo \"Error: no test specified\" && exit 0",
     "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luvitrocks/utopiaframework.org.git"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   },
   "keywords": [
     "utopia",
