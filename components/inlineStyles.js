@@ -22,3 +22,22 @@ insertRule(`
 insertRule(`
   .semibold { font-weight: 500 !important }
 `);
+insertRule(`
+  .semibolder { font-weight: 600 !important }
+`);
+insertRule(`.snippet {
+  background-color: rgba(0,0,0,.038) !important;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: Roboto Mono, Source Code Pro, Consolas, monospace;
+  padding: 1px 6px;
+}`);
+insertRule(`.doc-content p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}`);
+insertRule(`
+  .linker a { color: #333 }
+`);

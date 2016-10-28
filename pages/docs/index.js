@@ -8,6 +8,6 @@ import withContents from '../../containers/withContents';
 
 export default withContents(props => (
   <Contents title="Utopia Framework - Core documentation" {...props}>
-    Docs Utopia Framework!
+    <h1 className="mt0 h3 caps semibolder">Core</h1>
   </Contents>
 ));

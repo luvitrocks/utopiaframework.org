@@ -4,7 +4,7 @@ import React from 'react';
 export default ({ active, links, linksTitle }) => (
   <div className="menu">
     <h4 className={heading}>{linksTitle}</h4>
-    <ul className="list-reset m0">
+    <ul className="list-reset m0 mb4">
       {links.map(link => {
         return (
           <li key={link.url}>

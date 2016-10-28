@@ -1,10 +1,10 @@
 import 'glamor/reset';
 import React from 'react';
-import Highlight from 'react-highlight';
 import css from 'next/css';
 
 import '../components/inlineStyles';
 import Head from '../components/head';
+import Code from '../components/code';
 import Navbar from '../components/navbar';
 import Background from '../components/background';
 
@@ -60,8 +60,10 @@ export default class IndexPage extends React.Component {
               <h2 id="Examples" className="center mt0 mb2 caps">
                 <a href="#Examples" className={exampleTitle}>Minimal Example</a>
               </h2>
-              <p className={`center mx-auto mt2 mb4 pt1 ${featureText} ${exampleText}`}>Utopia application is a table containing an array of middleware functions which are composed and executed in a stack-like manner upon request. It is similar to many other middleware systems that you may have encountered such as Ruby's <a href="https://rack.github.io">Rack</a> or Node.js' <a href="https://github.com/senchalabs/connect">Connect</a>.</p>
-              <Highlight className={`lua ${code}`}>{utopiaCodeExample}</Highlight>
+              <p className={`center mx-auto mt2 mb4 pt1 ${featureText} ${exampleText}`}>
+                Utopia application is a table containing an array of middleware functions which are composed and executed in a stack-like manner upon request. It is similar to many other middleware systems that you may have encountered such as Ruby's <a href="https://rack.github.io">Rack</a> or Node.js' <a href="https://github.com/senchalabs/connect">Connect</a>.
+              </p>
+              <Code>{utopiaCodeExample}</Code>
             </div>
             <div className="center mb4 mt3 mx-auto full-width">
               <a href="/guides/installation" className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a>
@@ -121,13 +123,6 @@ const featureText = css({
 const hr = css({
   border: 0,
   borderBottom: '1px solid #eee'
-});
-const code = css({
-  backgroundColor: 'rgba(0,0,0,.03) !important',
-  borderRadius: '4px',
-  fontSize: '14px',
-  fontFamily: 'Roboto Mono, Source Code Pro, Consolas, monospace',
-  padding: '1.5em !important',
 });
 const exampleTitle = css({
   color: '#333',
