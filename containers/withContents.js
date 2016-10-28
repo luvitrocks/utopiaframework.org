@@ -37,10 +37,13 @@ export default function withContents (WrappedComponent) {
     }
 
     render() {
+      const isGuides = this.props.path.indexOf('/guides') !== -1;
+
       return (
         <WrappedComponent
           {...this.props}
-          links={this.props.path.indexOf('/guides') !== -1 ? guides : docs}
+          linksTitle={isGuides ? 'Guides' : 'Docs'}
+          links={isGuides ? guides : docs}
         />
       );
     }

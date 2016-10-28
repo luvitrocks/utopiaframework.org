@@ -1,9 +1,9 @@
 import css from 'next/css';
 import React from 'react';
 
-export default ({ active, links }) => (
+export default ({ active, links, linksTitle }) => (
   <div className="menu">
-    <h4 className={heading}>Guides</h4>
+    <h4 className={heading}>{linksTitle}</h4>
     <ul className="list-reset m0">
       {links.map(link => {
         return (

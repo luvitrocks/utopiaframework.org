@@ -5,7 +5,7 @@ import Header from './header';
 import Container from './container';
 import Menu from './guideMenu';
 
-export default ({ path, links, title, children }) => (
+export default ({ path, links, linksTitle, title, children }) => (
   <div>
     <Head title={title} />
 
@@ -15,7 +15,7 @@ export default ({ path, links, title, children }) => (
       <Container>
         <div className="griddy">
           <div className="griddy-col griddy-col-3">
-            <Menu active={path} links={links} />
+            <Menu active={path} links={links} linksTitle={linksTitle} />
           </div>
 
           <div className="griddy-col griddy-col-9 border-left">

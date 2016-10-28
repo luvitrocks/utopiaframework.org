@@ -8,7 +8,7 @@ insertRule(`
   ::selection { background: #F65FA3; color: #fff }
 `);
 insertRule(`body, h1, h2, h3, h4, h5 {
-  font-family: 'Avenir Next', 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
 }`);
 insertRule(`a {
