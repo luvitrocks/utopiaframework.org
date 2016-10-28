@@ -1,6 +1,9 @@
 import { insertRule } from 'next/css';
 
 insertRule(`
+  *, *:before, *:after { box-sizing: border-box }
+`);
+insertRule(`
   ::-moz-selection { background: #F65FA3; color: #fff }
   ::selection { background: #F65FA3; color: #fff }
 `);
@@ -16,4 +19,6 @@ insertRule(`
   .pinky { color: #F65FA3 !important }
   .bg-pinky { background-color: #F65FA3 !important }
 `);
-insertRule(`.semibold { font-weight: 500 !important }`);
+insertRule(`
+  .semibold { font-weight: 500 !important }
+`);

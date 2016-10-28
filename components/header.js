@@ -15,7 +15,5 @@ export default () => (
 
 const header = css({
   backgroundImage: 'linear-gradient(90deg, #F65FA3 , #FED764)',
-  height: 50,
-  bordeBottom: '1px solid rgba(0,0,0,.1)',
-  boxShadow: '0 0 1px 1px rgba(0,0,0,.1)'
+  height: 50
 });

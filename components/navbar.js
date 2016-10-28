@@ -4,7 +4,7 @@ import React from 'react';
 export default () => (
   <nav className={`navbar ${navbar}`}>
     <ul className={`list-reset clearfix ${navbarMenu}`}>
-      <li className="left inline-block"><a href="/guide" className={navbarMenuBtn}>Guide</a></li>
+      <li className="left inline-block"><a href="/guides" className={navbarMenuBtn}>Guides</a></li>
       <li className="left inline-block"><a href="/docs" className={navbarMenuBtn}>Docs</a></li>
       <li className="left inline-block"><a className={navbarMenuBtn} href="https://github.com/luvitrocks/utopia">GitHub</a></li>
       <li className="left inline-block"><a className={navbarMenuBtn} href="https://medium.com/luvitrocks">Blog</a></li>
@@ -24,7 +24,7 @@ const navbar = css({
 });
 const navbarMenu = css({
   margin: '12px auto 0',
-  maxWidth: 300,
+  maxWidth: 306,
   width: '100%'
 });
 const navbarMenuBtn = css({

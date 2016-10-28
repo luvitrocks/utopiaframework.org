@@ -64,8 +64,8 @@ export default class IndexPage extends React.Component {
               <Highlight className={`lua ${code}`}>{utopiaCodeExample}</Highlight>
             </div>
             <div className="center mb4 mt3 mx-auto full-width">
-              <a href="/guide/installation" className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a>
-              <a href="/guide/middlewares" className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">List Middlewares</a>
+              <a href="/guides/installation" className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a>
+              <a href="/guides/middlewares" className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">List Middlewares</a>
             </div>
           </div>
 
@@ -104,8 +104,8 @@ print('Ready on http://localhost:3000')
 `;
 
 const container = css({
-  maxWidth: 960,
   width: '100%',
+  maxWidth: 960
 });
 const hero = css({
   backgroundImage: 'linear-gradient(180deg, #F65FA3, #FED764)',
