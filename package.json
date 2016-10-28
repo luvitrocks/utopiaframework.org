@@ -15,7 +15,7 @@
     "url": "git+https://github.com/luvitrocks/utopiaframework.org.git"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": "6.x.x"
   },
   "keywords": [
     "utopia",
