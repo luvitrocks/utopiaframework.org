@@ -1,12 +1,19 @@
 import 'glamor/reset';
 import React from 'react';
-import css from 'next/css';
-
+import css, { insertRule } from 'next/css';
 import '../components/inlineStyles';
 import Head from '../components/head';
 import Code from '../components/code';
 import Navbar from '../components/navbar';
 import Background from '../components/background';
+
+// only client-side
+if (typeof document !== 'undefined') {
+  const $script = require('scriptjs');
+
+  $script('//platform.twitter.com/widgets.js', 'twitter-widgets');
+  $script('//buttons.github.io/buttons.js', 'github-buttons');
+}
 
 export default class IndexPage extends React.Component {
   render() {
@@ -65,7 +72,7 @@ export default class IndexPage extends React.Component {
               </p>
               <Code>{utopiaCodeExample}</Code>
             </div>
-            <div className="center mb4 mt3 mx-auto full-width">
+            <div className="center mb4 pb2 mt3 mx-auto full-width">
               <a href="/guides/installation" className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a>
               <a href="/guides/middlewares" className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">List Middlewares</a>
             </div>
@@ -73,13 +80,25 @@ export default class IndexPage extends React.Component {
 
           <hr className={hr} />
 
-          <div className={`center mx-auto mt2 mb4 ${container}`}>
+          <div className={`center mx-auto mt3 p1 mb4 relative ${container}`}>
+            <div className="social-buttons absolute left-0 pl1">
+              <a href="https://github.com/luvitrocks/utopia" className="github-button mr1" data-icon="octicon-star" data-count-href="/luvitrocks/utopia/stargazers" data-count-api="/repos/luvitrocks/utopia#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star luvitrocks/utopia on GitHub">Star</a>
+              <a href="https://twitter.com/share" className="twitter-share-button mr1" data-url="http://utopiaframework.org" data-text="Utopia Framework - Extensible HTTP server toolkit for Luvit I/O" data-via="voronianski" data-hashtags="lua" data-dnt="true">Tweet</a>
+            </div>
+            <div className={copyright}>
+              Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a><br />
+              © 2014-2016 Utopia contributors
+            </div>
           </div>
         </div>
       </div>
     );
   }
 }
+
+insertRule(`
+  .social-buttons iframe { margin-right: 10px !important }
+`);
 
 const utopiaCodeExample = `-- require dependencies
 local Utopia = require('utopia')
@@ -132,4 +151,11 @@ const exampleTitle = css({
 const exampleText = css({
   width: '100%',
   maxWidth: 700
+});
+const copyright = css({
+  color: '#aaa',
+  fontSize: '13px',
+  lineHeight: '20px',
+  textAlign: 'right',
+  fontWeight: 500
 });
