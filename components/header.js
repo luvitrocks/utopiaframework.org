@@ -1,7 +1,7 @@
 import css from 'next/css';
 import React from 'react';
 
-import Logo from './Logo';
+import Logo from './logo';
 import Navbar from './navbar';
 import Background from './background';
 
