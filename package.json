@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "start": "next start -p NODE_PORT",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
