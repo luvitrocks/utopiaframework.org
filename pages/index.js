@@ -3,7 +3,6 @@ import React from 'react';
 import Highlight from 'react-highlight';
 import css from 'next/css';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import '../components/inlineStyles';
 import Navbar from '../components/navbar';
@@ -31,7 +30,7 @@ export default class IndexPage extends React.Component {
               <p className="h3 mt1 mb2">Extensible HTTP server toolkit for Luvit I/O</p>
               <div className="mb4 mt3 mx-auto full-width">
                 <a href="https://github.com/luvitrocks/utopia/#install" className="inline-block h5 button button-outline button-big white mr3 px3 b2 ultra-rounded">View on GitHub</a>
-                <a href="#Examples" className="inline-block h5 button button-big bg-white px3 ultra-rounded" style={{color: '#FED764'}}>Check Examples</a>
+                <a href="#Examples" className="inline-block h5 button button-big bg-white px3 ultra-rounded" style={{color: '#fe9f64'}}>Check Examples</a>
               </div>
             </div>
 
@@ -72,8 +71,8 @@ export default class IndexPage extends React.Component {
               <Highlight className={`lua ${code}`}>{utopiaCodeExample}</Highlight>
             </div>
             <div className="center mb4 mt3 mx-auto full-width">
-              <Link href="/guide#installation"><a className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a></Link>
-              <Link href="/docs#middlewares"><a className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">List Middlewares</a></Link>
+              <a href="/guide/installation" className="inline-block h5 button button-outline button-big pinky mr3 px3 b2 ultra-rounded">Installation Guide</a>
+              <a href="/guide/middlewares" className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">List Middlewares</a>
             </div>
           </div>
 

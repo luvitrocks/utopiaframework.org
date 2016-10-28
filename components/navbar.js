@@ -1,12 +1,11 @@
 import css from 'next/css';
 import React from 'react';
-import Link from 'next/link';
 
 export default () => (
   <nav className={`navbar ${navbar}`}>
     <ul className={`list-reset clearfix ${navbarMenu}`}>
-      <li className="left inline-block"><Link href="/guide"><a className={navbarMenuBtn}>Guide</a></Link></li>
-      <li className="left inline-block"><Link href="/docs"><a className={navbarMenuBtn}>Docs</a></Link></li>
+      <li className="left inline-block"><a href="/guide" className={navbarMenuBtn}>Guide</a></li>
+      <li className="left inline-block"><a href="/docs" className={navbarMenuBtn}>Docs</a></li>
       <li className="left inline-block"><a className={navbarMenuBtn} href="https://github.com/luvitrocks/utopia">GitHub</a></li>
       <li className="left inline-block"><a className={navbarMenuBtn} href="https://medium.com/luvitrocks">Blog</a></li>
     </ul>

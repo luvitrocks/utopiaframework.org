@@ -2,11 +2,11 @@ import 'glamor/reset';
 import React from 'react';
 import css from 'next/css';
 import Head from 'next/head';
-import Link from 'next/link';
 
-import '../components/inlineStyles';
-import Navbar from '../components/navbar';
-import Background from '../components/background';
+import '../../components/inlineStyles';
+import Logo from '../../components/Logo';
+import Navbar from '../../components/navbar';
+import Background from '../../components/background';
 
 export default () => (
   <div>
@@ -23,14 +23,19 @@ export default () => (
     <div>
       <header className={`center white relative ${header}`}>
         <Navbar />
-
-        <Link href="/"><a className={`h5 caps white bold block ${logo}`}>Utopia Framework</a></Link>
-
+        <Logo />
         <Background />
       </header>
 
       <div>
-        Guide Utopia Framework! <Link href="/"><a className="inline-block h5 button button-big bg-pinky white px3 ultra-rounded">Pinky</a></Link>
+        Guide Utopia Framework!
+        <a href="/guide" className="inline-block h5">Overview</a>
+        <a href="/guide/installation" className="inline-block h5">Installation</a>
+        <a href="/guide/community" className="inline-block h5">Community</a>
+        <a href="/guide/getting-started" className="inline-block h5">Getting Started</a>
+        <a href="/guide/middlewares" className="inline-block h5">Middlewares</a>
+        <a href="/guide/routing" className="inline-block h5">Routing</a>
+        <a href="/guide/deployment" className="inline-block h5">Deployment</a>
       </div>
     </div>
   </div>
@@ -41,10 +46,4 @@ const header = css({
   height: 50,
   bordeBottom: '1px solid rgba(0,0,0,.1)',
   boxShadow: '0 0 1px 1px rgba(0,0,0,.1)'
-});
-const logo = css({
-  position: 'absolute',
-  top: 16,
-  left: 30,
-  zIndex: 2
 });
